@@ -1,0 +1,21 @@
+{% extends "masterTemplate.twig" %}
+
+{% block content%}
+    <div>
+        <h1>Add Job</h1>
+        <div class="alert alert-primary" role="alert">
+            {{ responseMessage }}            
+        </div>
+        
+        <form action="/platziphp/jobs/" method="post" enctype="multipart/form-data">
+            <label for="">Title:</label>
+            <input type="text" name="title"><br>
+            <label for="">Description:</label>
+            <input type="text" name="description"><br>
+            <input type="file" name="logo"><br><br>
+            <button type="submit">Enviar</button>
+        </form>
+
+    </div>       
+
+{% endblock %}
